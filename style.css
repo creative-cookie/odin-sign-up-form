@@ -1,3 +1,29 @@
+:root{
+    --clr-primary: 92, 20%, 35%;
+
+    --clr-error: 0, 74%, 42%;
+
+    --clr-dark-800: 0, 0%, 20%;
+    --clr-dark-900: 0, 0%, 10%;
+
+    --clr-white: 0, 0%, 100%;
+    --clr-light-200: 210, 20%, 98%;
+    --clr-light-500: 0, 0%, 47%;
+
+    --ff-primary: "Merriweather Sans", sans-serif;
+
+    --fs-small: 1rem;
+    --fs-regular: 1.25rem;
+    --fs-medium: 1.5rem;
+    --fs-x-large: 3.75rem;
+
+    --fw-regular: 300;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+}
+
 body{
-    background-color: #596D48;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    background-color: hsl(var(--clr-primary));
 }
