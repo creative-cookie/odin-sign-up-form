@@ -11,7 +11,9 @@
     --clr-light-500: 0, 0%, 47%;
 
     --ff-primary: "Merriweather Sans", sans-serif;
+    --ff-logo: "Norse Bold", sans-serif;
 
+    --fs-x-small: 0.75rem;
     --fs-small: 1rem;
     --fs-regular: 1.25rem;
     --fs-medium: 1.5rem;
@@ -20,6 +22,11 @@
     --fw-regular: 300;
     --fw-semi-bold: 600;
     --fw-bold: 700;
+}
+
+@font-face {
+  font-family: "Norse Bold";
+  src: url(fonts/Norse-Bold.otf);
 }
 
 /* ------- */
@@ -31,17 +38,97 @@
     margin: 0;
   }
 
-  img {
-    display: block;
-    max-width: 100%;
-  }
-
-  input, button {
-    font: inherit;
-  }
-
-body{
-    font-family: var(--ff-primary);
-    font-weight: var(--fw-regular);
-    background-color: hsl(var(--clr-primary));
+img {
+  display: block;
+  max-width: 100%;
 }
+
+input, button {
+  font: inherit;
+}
+
+/* --------- */
+/*  General  */
+/* --------- */
+body{
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 1rem;
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-regular);
+  background-color: hsl(var(--clr-primary));
+}
+
+/* --------- */
+/*  Sign-Up  */
+/* --------- */
+
+.sign-up{
+  background-color: hsl(var(--clr-white));
+  box-shadow: 5px 5px 5px hsla(var(--clr-dark-800), 0.5);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+/* Sign-Up Side Section */
+.sign-up__side{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 25vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/leaves.jpg);
+  color: hsl(var(--clr-white));
+  position: relative;
+}
+
+.side__container{
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.side__logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.side__logo img{
+  height: 6rem;
+}
+
+.side__logo p{
+  font-size: 4rem;
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-logo);
+  text-transform: uppercase;
+}
+
+.side__content,
+.side__CTA{
+  display: none;
+}
+
+.side__credit{
+  width: calc(100% - 1rem);
+  position: absolute;
+  bottom: 0.5rem;
+  text-align: center;
+  color: hsl(var(--clr-light-500));
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-x-small);
+}
+
+.side__credit a{
+  color: inherit;
+}
+
+.side__credit a:hover,
+.side__credit a:focus{
+  color: hsl(var(--clr-white));
+}
+
+/* Sign-Up Main Section */
