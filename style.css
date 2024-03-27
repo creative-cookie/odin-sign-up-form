@@ -51,14 +51,44 @@ input, button {
 /*  General  */
 /* --------- */
 body{
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  margin: 1rem;
+  margin-inline: 1rem;
+  line-height: 1.5;
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
   color: var(--clr-dark-900);
   background-color: hsl(var(--clr-primary));
+}
+
+label{
+  color: var(--clr-dark-800);
+  text-transform: uppercase;
+  font-size: var(--fs-x-small);
+  letter-spacing: 0.25rem;
+}
+
+.btn{
+  border: none;
+  background-color: hsl(var(--clr-primary));
+  padding: 0.5rem 2rem;
+  border-radius: 0.25rem;
+  color: hsl(var(--clr-white));
+  font-weight: var(--fw-semi-bold);
+}
+
+/* --------- */
+/*  Layout  */
+/* --------- */
+.form-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.flow > * + *{
+  margin-top: 1rem;
 }
 
 /* --------- */
@@ -70,6 +100,7 @@ body{
   box-shadow: 5px 5px 5px hsla(var(--clr-dark-800), 0.5);
   border-radius: .5rem;
   overflow: hidden;
+  min-width: 90vw;
 }
 
 /* Sign-Up Side Section */
@@ -132,3 +163,8 @@ body{
 }
 
 /* Sign-Up Main Section */
+.sign-up__primary{
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
