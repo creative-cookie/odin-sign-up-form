@@ -180,8 +180,10 @@ label{
 }
 
 .sign-up__secondary{
-  display: grid;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex: 1;
   width: 33%;
   min-width: 300px;
@@ -190,19 +192,11 @@ label{
   color: hsl(var(--clr-white));
 }
 
-.sign-up__secondary > *{
-  grid-row: 2 / 3;
-  grid-column: 1 / -1;
-}
-
 .sign-up__info{
-  grid-row: 1 / -1;
-  align-self: center;
-}
-
-.sign-up__secondary .photo-credit{
-  grid-row: 2 / -1;
-  align-self: self-end;
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sign-up__primary{
