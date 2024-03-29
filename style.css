@@ -17,6 +17,7 @@
     --fs-small: 1rem;
     --fs-regular: 1.25rem;
     --fs-medium: 1.5rem;
+    --fs-large: 2rem;
     --fs-x-large: 3.75rem;
 
     --fw-regular: 400;
@@ -146,6 +147,10 @@ label{
   font-size: 1.25rem;
 }
 
+.fs-large{
+  font-size: var(--fs-large);
+}
+
 .fw-bold{
   font-weight: var(--fw-bold);
 }
@@ -207,52 +212,22 @@ label{
   flex: 1;
   width: 77%;
   min-width: 800px;
+  padding-block: 1rem;
+  background-color: hsl(var(--clr-light-200));
 }
 
-/* Sign-Up Side Section */
-/* .sign-up__secondary{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/leaves.jpg);
-  color: hsl(var(--clr-white));
-  position: relative;
+.sign-up__primary > div {
+  padding-inline: 1rem;
 }
 
-.sign-up__secondary-container{
-  margin: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.sign-up__primary form{
+  padding: 1rem;
+  background-color: hsl(var(--clr-white));
+  box-shadow: 5px 5px 5px hsla(var(--clr-dark-800), 0.2);
 }
 
-.sign-up__logo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.25rem;
+.sign-up__primary .main-form{
+  display: grid;
+  grid-template-columns: auto auto;  
+  gap: 1rem;
 }
-
-.sign-up__logo img{
-  height: 6rem;
-}
-
-.sign-up__logo p{
-  font-size: 4rem;
-  font-weight: var(--fw-bold);
-  font-family: var(--ff-logo);
-  text-transform: uppercase;
-}
-
-.sign-up__content{
-  display: none;
-}
-
-*/
-
-/* Sign-Up Main Section */
-/* .sign-up__primary{
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-}  */
