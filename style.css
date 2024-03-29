@@ -19,7 +19,7 @@
     --fs-medium: 1.5rem;
     --fs-x-large: 3.75rem;
 
-    --fw-regular: 300;
+    --fw-regular: 400;
     --fw-semi-bold: 600;
     --fw-bold: 700;
 }
@@ -55,8 +55,8 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin-inline: 1rem;
-  line-height: 1.5;
+  padding: 1rem;
+  line-height: 1.7;
   font-family: var(--ff-primary);
   font-weight: var(--fw-regular);
   color: var(--clr-dark-900);
@@ -70,13 +70,84 @@ label{
   letter-spacing: 0.25rem;
 }
 
+
+/* ------------ */
+/*  Components  */
+/* ------------ */
+/* Modal */
+.modal{
+  background-color: hsl(var(--clr-white));
+  box-shadow: 5px 5px 5px hsla(var(--clr-dark-800), 0.5);
+  border-radius: .75rem;
+  overflow: hidden;
+}
+
+/* Buttons */
 .btn{
   border: none;
-  background-color: hsl(var(--clr-primary));
   padding: 0.5rem 2rem;
   border-radius: 0.25rem;
-  color: hsl(var(--clr-white));
   font-weight: var(--fw-semi-bold);
+}
+
+.btn--primary{
+  background-color: hsl(var(--clr-primary));
+  color: hsl(var(--clr-white));
+}
+
+/* Logo */
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.logo p{
+  font-size: 4rem;
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-logo);
+  text-transform: uppercase;
+}
+
+.logo.logo--md img{
+  height: 6rem;
+}
+
+/* Photo Credit */
+.photo-credit{
+  color: hsl(var(--clr-light-500));
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-x-small);
+  text-align: center;
+}
+
+.photo-credit a{
+  color: inherit;
+}
+
+.photo-credit a:hover,
+.photo-credit a:focus{
+  color: hsl(var(--clr-white));
+}
+
+/* ----------- */
+/*  Utilities  */
+/* ----------- */
+.all-caps{
+  text-transform: uppercase;
+}
+
+.text-italic{
+  font-style: italic;
+}
+
+.fs-medium{
+  font-size: 1.25rem;
+}
+
+.fw-bold{
+  font-weight: var(--fw-bold);
 }
 
 /* --------- */
@@ -96,19 +167,53 @@ label{
 /* --------- */
 
 .sign-up{
-  background-color: hsl(var(--clr-white));
-  box-shadow: 5px 5px 5px hsla(var(--clr-dark-800), 0.5);
-  border-radius: .5rem;
-  overflow: hidden;
-  min-width: 90vw;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  max-width: 1200px;
+  min-height: 700px;
+}
+
+.sign-up__secondary{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  flex: 1;
+  width: 33%;
+  min-width: 300px;
+  padding: 1rem 1.875rem;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(images/leaves.jpg);
+  color: hsl(var(--clr-white));
+}
+
+.sign-up__secondary > *{
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+}
+
+.sign-up__info{
+  grid-row: 1 / -1;
+  align-self: center;
+}
+
+.sign-up__secondary .photo-credit{
+  grid-row: 2 / -1;
+  align-self: self-end;
+}
+
+.sign-up__primary{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  width: 77%;
+  min-width: 800px;
 }
 
 /* Sign-Up Side Section */
-.sign-up__secondary{
+/* .sign-up__secondary{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 25vh;
   background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/leaves.jpg);
   color: hsl(var(--clr-white));
   position: relative;
@@ -143,28 +248,11 @@ label{
   display: none;
 }
 
-.sign-up__photo-credit{
-  width: calc(100% - 1rem);
-  position: absolute;
-  bottom: 0.5rem;
-  text-align: center;
-  color: hsl(var(--clr-light-500));
-  font-weight: var(--fw-regular);
-  font-size: var(--fs-x-small);
-}
-
-.sign-up__photo-credit a{
-  color: inherit;
-}
-
-.sign-up__photo-credit a:hover,
-.sign-up__photo-credit a:focus{
-  color: hsl(var(--clr-white));
-}
+*/
 
 /* Sign-Up Main Section */
-.sign-up__primary{
+/* .sign-up__primary{
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
-}
+}  */
