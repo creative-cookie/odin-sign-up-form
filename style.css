@@ -191,7 +191,7 @@ label{
 }
 
 .sign-up__secondary > *{
-  grid-row: 1 / -1;
+  grid-row: 2 / 3;
   grid-column: 1 / -1;
 }
 
@@ -227,7 +227,25 @@ label{
 }
 
 .sign-up__primary .main-form{
-  display: grid;
-  grid-template-columns: auto auto;  
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
+}
+
+.sign-up__primary .form-group{
+  flex-basis: calc(50% - 1rem);
+}
+
+@media screen and (max-width: 900px){
+  .sign-up__primary .main-form{
+    flex-direction: column;
+  }
+
+  .sign-up__primary{
+    min-width: 100%;
+  }
+
+  .sign-up__info > p{
+    display: none;
+  }
 }
